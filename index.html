@@ -9,21 +9,18 @@
 
         <div class="buttonsContainer">
 
+            <div id="downloadButton" onclick="getMusicFolderOutput()" class="downloadButton downloadButtonHidden text-left">
+                <div class="downloadButtonText">Download<br />Excel</div>
+            </div>
 
-            <form action="#" class="example">
-
-                <div id="downloadButton" onclick="getMusicFolderOutput(true)" class="downloadButton downloadButtonHidden text-left">
-                    <div class="downloadButtonText">Download Excel <img src="img/arrow-down.jpg" class="arrow" /></div>
+            <div id="fileinputs" class="fileinputs">
+                <input type="file" class="file hidden" noscript="true" webkitdirectory="" directory="">
+                <div class="fakefile">
+                    <input>
+                    <div onclick="getMusicFolderOutput()" class="fileinputsText">Select Music Folder</div>
                 </div>
+            </div>
 
-                <div id="fileinputs" class="fileinputs">
-                    <input type="file" class="file hidden" noscript="true" webkitdirectory="" directory="">
-                    <div class="fakefile">
-                        <input>
-                        <div class="inputFileText">Select Music Folder <img src="img/arrow-down.jpg" class="arrow" /></div>
-                    </div>
-                </div>
-            </form>
         </div>
         <div id="musicFolderContainer"></div>
 
