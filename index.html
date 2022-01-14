@@ -1,0 +1,17 @@
+<html>
+<head><title>Folderlist</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+
+<body>
+
+  <div class="buttonsContainer">
+    <button id="downloadButton" onclick="getMusicFolderOutput(true)" class="csvButton csvButtonHidden">Download Excel</button>
+    <input class="folderPicker" type="file" webkitdirectory="" directory="" />
+  </div>
+  <div id="musicFolderContainer"></div>
+ 
+</body>
+<script src="js/musicFolderList.js"></script>
+<script>getMusicFolderOutput();</script>
+</html>
