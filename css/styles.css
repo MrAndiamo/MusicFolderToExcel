@@ -1,43 +1,111 @@
 body {
-	padding: 50;
+    padding: 50;
 }
 
 td {
-	padding: 10;
+    padding: 10;
 }
 
-.csvButton {
-margin-right: 50px;
+.downloadButtonHidden {
+    display: none;
 }
 
-.csvButtonHidden {
-	display: none;
+.fileinputsHidden {
+    display: none;
 }
-.csvButtonVisible {
-	display: inline;
-}
-
 
 .headerTitle {
-	font-size: 20px;
-	font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .buttonsContainer {
-	width: 100%;
-	flex-direction: row;
-	margin-bottom: 50;
-	padding: 10;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 30;
+    padding-left: 10;
 }
 
-
-.csvButton {
-	margin-right: 50px;
+.downloadButton {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 195px;
+    height: 30px;
+    padding-left: 3px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-.csvButtonHidden {
-	display: none;
+.downloadButtonText {
+    position: absolute;
+    left: 12px;
+    top: 3px;
 }
-.csvButtonVisible {
-	display: inline;
+
+input {
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 230px;
+    height: 30px;
+    padding-left: 3px;
+}
+
+input:focus {
+    background-color: transparent;
+}
+
+div.fileinputs {
+    flex-direction: row;
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+
+input.file {
+    margin: 0;
+    cursor: pointer;
+}
+
+input.file.hidden {
+    position: relative;
+    text-align: right;
+    -moz-opacity: 0;
+    filter: alpha(opacity: 0);
+    opacity: 0;
+    z-index: 2;
+}
+
+div.fakefile {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    line-height: 100%;
+}
+
+div.fakefile input {
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+.inputFileText {
+    position: absolute;
+    left: 12px;
+    top: 7px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.arrow {
+    position: relative;
+    left: 15px;
+    height: 5px;
+    height: 10px;
+    width: auto;
 }

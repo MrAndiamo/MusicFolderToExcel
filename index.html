@@ -1,17 +1,36 @@
 <html>
-<head><title>Folderlist</title>
-  <link rel="stylesheet" href="css/styles.css">
-  
 
-<body>
+<head>
+    <title>Folderlist</title>
+    <link rel="stylesheet" href="css/styles.css">
 
-  <div class="buttonsContainer">
-    <button id="downloadButton" onclick="getMusicFolderOutput(true)" class="csvButton csvButtonHidden">Download Excel</button>
-    <input class="folderPicker" type="file" webkitdirectory="" directory="" />
-  </div>
-  <div id="musicFolderContainer"></div>
- 
-</body>
-<script src="js/musicFolderList.js"></script>
-<script>getMusicFolderOutput();</script>
+
+    <body>
+
+        <div class="buttonsContainer">
+
+
+            <form action="#" class="example">
+
+                <div id="downloadButton" onclick="getMusicFolderOutput(true)" class="downloadButton downloadButtonHidden text-left">
+                    <div class="downloadButtonText">Download Excel <img src="img/arrow-down.jpg" class="arrow" /></div>
+                </div>
+
+                <div id="fileinputs" class="fileinputs">
+                    <input type="file" class="file hidden" noscript="true" webkitdirectory="" directory="">
+                    <div class="fakefile">
+                        <input>
+                        <div class="inputFileText">Select Music Folder <img src="img/arrow-down.jpg" class="arrow" /></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="musicFolderContainer"></div>
+
+    </body>
+    <script src="js/musicFolderList.js"></script>
+    <script>
+        getMusicFolderOutput();
+    </script>
+
 </html>
