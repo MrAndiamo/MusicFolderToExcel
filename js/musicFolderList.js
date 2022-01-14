@@ -24,40 +24,15 @@ function getMusicFolderOutput(csv = false) {
                 // keep song full filename
                 var songFileName = song;
                 // Remove extention from filename-string
-                song = song.substr(0, song.length - 4);
+
+                table = table + "<tr><td class='artist'>" + artist + "</td>";
+                table = table + "<td class='album'>" + album + "</td>";
 
                 // Remove everything between (*) from string (name-fix)
-                var song = song.replace(/ *\([^)]*\) */g, "");
-
-                // If last artist is different from the last in the directory, declare new lastArtist 
-                if (!lastArtist) {
-                    var lastArtist = artist;
-                    table = table + "<tr><td class='artist'>" + artist + "</td>";
-                } else if (lastArtist !== artist && fullFolder[4] === undefined) {
-                    var lastArtist = artist;
-                    table = table + "</tr><tr><td class='artist'>" + artist + "</td>";
-                } else {
-                    if (fullFolder[4] === undefined) table = table + "</tr><tr><td>&nbsp;</td>";
-                }
-
-                // If last Album is different from the last in the directory, declare new lastAlbum 
-                if (!lastAlbum || lastAlbum !== album && fullFolder[4] === undefined) {
-                    var lastAlbum = album;
-                    table = table + "<td class='album'>" + album + "</td>";
-                } else {
-                    if (fullFolder[4] === undefined) table = table + "<td>&nbsp;</td>";
-                }
-
-                // if there is no subfolder(s)
-                if (fullFolder[4] === undefined) {
-
-                    table = table + "<td class='song'>" + song + "</td>";
-                    table = table + "<td class='songfilename'>" + songFileName + "</td>";
-                } else {
-
-                    // loop through folders/files to place in overview/CSV
-                    var foldersLeft = fullFolder.length - 3;
-                }
+                song = song.substr(0, song.length - 4);
+                song = song.replace(/ *\([^)]*\) */g, "");
+                table = table + "<td class='song'>" + song + "</td>";
+                table = table + "<td class='songfilename'>" + songFileName + "</td>";
 
             }
         }
